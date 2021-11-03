@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/412967/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 26 Oct 2021 22:22:13 UTC
+update_date: Wed, 03 Nov 2021 13:43:31 UTC
 stages:
 - id: 680
   step: 10888
@@ -208,7 +208,7 @@ topics:
     theory_id: 6302
   5:
   - title: Computer algorithms
-    theory_id: 4953
+    theory_id: 16547
   - title: Algorithms in Python
     theory_id: 7316
   - title: Functional decomposition
