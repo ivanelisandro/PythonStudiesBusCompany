@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # get the author, producer and title from the 'information' dict
+    print(...)
+    print(...)
+    print(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16727#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 12 Nov 2021 04:32:39 UTC
+record: -1
