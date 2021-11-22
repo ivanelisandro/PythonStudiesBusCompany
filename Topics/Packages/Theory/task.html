@@ -2,7 +2,7 @@
 <html>
  <head></head>
  <body>
-  <p>When our code is becoming bigger, it becomes very difficult to maintain and keep track of all the modules included. In order to make the code more organized, we can resort to packages. In this topic, we'll learn what that is and how to use them correctly.</p> 
+  <p>When our code gets longer, it becomes very difficult to maintain and keep track of all the modules included. In order to make the code more organized, we can resort to packages. In this topic, we'll learn what they are and how to use them correctly.</p> 
   <h5 style="text-align: center;">Package definition and structure</h5> 
   <p>A<strong> package</strong> is a way of structuring modules <strong>hierarchically</strong> with the help of the so-called <strong>"dotted module names"</strong>. Thus the module name <code class="language-python">sun.moon</code> designates a submodule named "moon" in a package named "sun".</p> 
   <p>The possible<strong> structure</strong> might be the following:</p> 
@@ -29,7 +29,7 @@
   <pre><code class="language-python">import package.subpackage.artificial</code></pre> 
   <p>After we’ve loaded the submodule in such a way, its content should be referenced with its <strong>full name</strong>:</p> 
   <pre><code class="language-python">package.subpackage.artificial.function(arg1, arg2)</code></pre> 
-  <p>Besides, it’s possible to import a particular function from the submodule:</p> 
+  <p>Apart from that, it’s possible to import a particular function from the submodule:</p> 
   <pre><code class="language-python">from package.subpackage.artificial import function</code></pre> 
   <p>After that, you can address the <code class="language-python">function()</code> directly, without specifying the full path to a module. </p> 
   <p>The method of importing modules depends on your current program and needs. The main rule is readability!</p> 

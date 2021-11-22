@@ -22,3 +22,9 @@ content:
 - Glob module
 - Split and join
 - Working with PDF in Python
+- Regexps in Python
+- Args
+- Slicing
+- Integer arithmetic
+- Custom generators
+- Escaping in regexps

@@ -46,6 +46,8 @@ original_pdf = PdfFileReader("dummy.pdf")
 page_0 = original_pdf.getPage(0).rotateClockwise(90)
 new_pdf.addPage(page_0)
 
+pdf_reader = PdfFileReader("dummy.pdf")
+
 # Rotate page 90 degrees to the left
 page_1 = pdf_reader.getPage(0).rotateCounterClockwise(90)
 new_pdf.addPage(page_1)
