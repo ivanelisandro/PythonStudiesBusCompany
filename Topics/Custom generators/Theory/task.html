@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>In this topic, we're gonna learn about one more useful and pretty unique Python tool called <em><strong>generator</strong></em>. Its implementation looks quite similar to the things you already know (like function and list comprehension), so it won't be hard to master, but definitely worth it since generators have quite a few tricks up their sleeve you might find very useful in practice. Let's not waste time any more and get to know them better!</p> 
-  <h5 style="text-align: center;">Generator functions</h5> 
+  <h5 id="generator-functions" style="text-align: center;">Generator functions</h5> 
   <p>Imagine that in order to solve some problem, you need to obtain the first few multiples of some number <code class="language-python">a</code> (for example, the first 4 multiples of 3 are 3, 6, 9, 12, etc.). The most straightforward way to do so is probably to define a function <code class="language-python">multiples(a,n)</code> as follows: </p> 
   <pre><code class="language-python">def multiples(a, n):
     i = 1
@@ -48,7 +48,7 @@ print(next(multiples_of_three))
 # 15
 print(next(multiples_of_three))
 # Error message: StopIteration</code></pre> 
-  <h5 style="text-align: center;">Generator expressions</h5> 
+  <h5 id="generator-expressions" style="text-align: center;">Generator expressions</h5> 
   <p>Another way of defining a generator is generator expressions, which are similar to list comprehensions. The only difference in the syntax are the brackets: one should use square brackets <code class="language-python">[]</code> for list comprehension statements and the round ones <code class="language-python">()</code> for defining a generator. Compare:</p> 
   <pre><code class="language-python">numbers = [1, 2, 3]
 
@@ -78,11 +78,11 @@ for n in my_generator:
 # 1
 # 4
 # 9</code></pre> 
-  <h5 style="text-align: center;">Why are generators useful?</h5> 
+  <h5 id="why-are-generators-useful" style="text-align: center;">Why are generators useful?</h5> 
   <p>So far, we've learned that generators produce a single value from a defined sequence<em> </em>only when they are explicitly asked to do so. This approach is called<strong> lazy evaluation</strong>.</p> 
   <p>Lazy evaluation makes the code much more memory efficient. Indeed, at each point in time, only values are produced and stored in memory one by one: the previous value is forgotten after we have moved to the next one and, therefore, doesn't take up space.</p> 
   <p>Keep in mind, however, that exactly because the previous value is forgotten when the new one needs to be generated, we can only go over the values once.</p> 
-  <h5 style="text-align: center;">Summary</h5> 
+  <h5 id="summary" style="text-align: center;">Summary</h5> 
   <p>Those were the basics of generators in Python. Let's sum it up:</p> 
   <ul> 
    <li>Generators allow one to declare a function that behaves like an iterator.</li> 
