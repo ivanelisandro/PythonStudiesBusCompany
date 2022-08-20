@@ -35,3 +35,4 @@ content:
 - Nested lists
 - Regexp sets and ranges
 - Shorthands
+- Regexp quantifiers
