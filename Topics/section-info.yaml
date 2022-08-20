@@ -36,3 +36,5 @@ content:
 - Regexp sets and ranges
 - Shorthands
 - Regexp quantifiers
+- Match object and flags
+- Sorting a list

@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # the following code creates a list from input, please do not modify it
+    ints = [int(num) for num in input().split()]
+
+    # your solution here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/21640#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 20 Aug 2022 05:35:16 UTC
+record: -1
