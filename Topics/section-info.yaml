@@ -39,3 +39,5 @@ content:
 - Match object and flags
 - Sorting a list
 - Regexp functions in Python
+- Regexp flags in Python
+- Preconditions and postconditions

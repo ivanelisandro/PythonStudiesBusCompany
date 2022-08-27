@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: "import re \n\npets = input()\n# your code here"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14247#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 25 Aug 2022 04:12:39 UTC
+record: -1
