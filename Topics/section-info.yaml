@@ -41,3 +41,6 @@ content:
 - Regexp functions in Python
 - Regexp flags in Python
 - Preconditions and postconditions
+- Creating bytes
+- Groups and alternations
+- Overview of NLTK
