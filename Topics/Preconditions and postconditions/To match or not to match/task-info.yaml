@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: <code>re.search('(?&lt;=yellow)socks', string)</code>
-- text: <code>re.match('(?=yellow)socks', string)</code>
-- text: <code>re.search('socks(?=yellow)', string)</code>
-- text: <code>re.search('socks(?&lt;=yellow)', string)</code>
+- text: "<code>re.search('(?&lt;=yellow)socks', string)</code>"
+- text: "<code>re.match('(?=yellow)socks', string)</code>"
+- text: "<code>re.search('socks(?=yellow)', string)</code>"
+- text: "<code>re.search('socks(?&lt;=yellow)', string)</code>"
 files:
 - name: main.py
   visible: true

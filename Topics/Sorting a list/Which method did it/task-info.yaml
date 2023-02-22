@@ -3,7 +3,7 @@ is_multiple_choice: true
 options:
 - text: <code>numbers.sort(reverse=True)</code>
 - text: <code>sorted_numbers = sorted(numbers)</code>
-- text: <code>sorted_numbers = sorted(numbers, reverse=True)</code>
+- text: "<code>sorted_numbers = sorted(numbers, reverse=True)</code>"
 - text: <code>numbers.reverse()</code>
 - text: <code>numbers.sort(reverse=False)</code>
 - text: <code>sorted_numbers = reversed(numbers)</code>

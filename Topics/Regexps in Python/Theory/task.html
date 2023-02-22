@@ -1,5 +1,5 @@
 <h2>Regexps in Python</h2>
-<html><body><p>A <strong>regular expression</strong> is a sequence of characters defining <em>a search pattern</em>, that is,<em> </em>a pattern describing a set of strings. These patterns are used for searching and editing text, replacing one substring with another, and so on. The simplest example of using a regular expression is when we search for some word in a text file or on a web page. For example, if we look for the word "python", the string "python" becomes a simple regular expression <em>— </em>a search pattern that corresponds only to the word "python" and nothing else. More complicated regular expressions will be able to match a larger number of strings.</p>
+<p>A <strong>regular expression</strong> is a sequence of characters defining <em>a search pattern</em>, that is,<em> </em>a pattern describing a set of strings. These patterns are used for searching and editing text, replacing one substring with another, and so on. The simplest example of using a regular expression is when we search for some word in a text file or on a web page. For example, if we look for the word "python", the string "python" becomes a simple regular expression <em>— </em>a search pattern that corresponds only to the word "python" and nothing else. More complicated regular expressions will be able to match a larger number of strings.</p>
 <p>In the previous topic, we've already learned the basics of regular expressions common for all programming languages. Now it's time to see what are the specifics of using regexps in Python.</p>
 <h5 id="re-module-and-match">Re module and match()</h5>
 <p>You can use the power of regexps if you refer to a standard Python module called <code class="language-python">re</code>. That is, to use anything related to regexps in Python, you must first import this module.</p>
@@ -72,9 +72,9 @@ re.match(regexp, ' points to gryffindor')</code></pre>
 <p>Here is a recap:</p>
 <ol>
 <li>For handling regular expression in Python, the <code class="language-python">re</code> module is used.</li>
-<li><code class="language-python">match()</code> function of the <code class="language-python">re</code> module checks whether there's any substring in the beginning of the string that matches your regexp template.</li>
-<li>The result of <code class="language-python">match()</code> function is either <code class="language-python">None</code> or a match object. </li>
-<li>Match object converted to <code class="language-python">bool </code>always equals <code class="language-python">True</code>.</li>
+<li>The <code class="language-python">match()</code> function of the <code class="language-python">re</code> module checks whether there's any substring in the beginning of the string that matches your regexp template.</li>
+<li>The result of the <code class="language-python">match()</code> function is either <code class="language-python">None</code> or a <code class="language-python">match</code> object. </li>
+<li>A <code class="language-python">match</code> object converted to <code class="language-python">bool</code> always equals <code class="language-python">True</code>.</li>
 <li>Regular expressions by default are case-sensitive.</li>
 <li>Dot <code class="language-python">.</code> replaces any character except for <code class="language-python">\n</code>; question mark <code class="language-python">?</code> means that the previous character is optional and can be missing from the string.</li>
-</ol></body></html>
+</ol>

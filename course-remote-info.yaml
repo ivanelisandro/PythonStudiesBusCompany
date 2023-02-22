@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/412967/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Fri, 12 Aug 2022 13:56:36 UTC
+update_date: "Mon, 20 Feb 2023 14:14:36 UTC"
 stages:
 - id: 680
   step: 10888
@@ -53,12 +53,12 @@ topics:
     theory_id: 5932
   - title: Load module
     theory_id: 6019
+  - title: Command line overview
+    theory_id: 8977
   - title: For loop
     theory_id: 6065
   - title: While loop
     theory_id: 5940
-  - title: Command line overview
-    theory_id: 8977
   - title: Elif statement
     theory_id: 5926
   - title: Documentation
@@ -113,29 +113,17 @@ topics:
     theory_id: 9008
   1:
   - title: Overview of NLTK
-    theory_id: 10022
+    theory_id: 22474
   - title: Tokenization
     theory_id: 10363
-  - title: Computer programming
-    theory_id: 8739
-  - title: Introduction to OOP
-    theory_id: 3614
   - title: Create module
     theory_id: 6057
   - title: Packages
     theory_id: 6384
-  - title: Class
-    theory_id: 6661
-  - title: Class instances
-    theory_id: 6669
   - title: Parameters and Options
     theory_id: 9746
   - title: Pip
     theory_id: 6230
-  - title: Methods
-    theory_id: 6931
-  - title: Methods and attributes
-    theory_id: 6981
   - title: Program execution
     theory_id: 6047
   - title: Errors
@@ -172,8 +160,6 @@ topics:
     theory_id: 9157
   - title: Regexps in programs
     theory_id: 14611
-  - title: Scopes
-    theory_id: 6322
   - title: Indexes
     theory_id: 6189
   - title: Identity testing

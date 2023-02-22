@@ -1,5 +1,5 @@
 type: code
-custom_name: Money, money, money!
+custom_name: "Money, money, money!"
 files:
 - name: main.py
   visible: true
@@ -18,5 +18,5 @@ feedback_link: https://hyperskill.org/learn/step/15073#comment
 status: Solved
 feedback:
   message: <html>Correct solution</html>
-  time: Fri, 19 Aug 2022 03:51:30 UTC
+  time: "Fri, 19 Aug 2022 03:51:30 UTC"
 record: -1

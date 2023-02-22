@@ -2,7 +2,7 @@ type: choice
 is_multiple_choice: false
 options:
 - text: There will be an error.
-- text: <code>[a]</code>
+- text: "<code>[a]</code>"
 - text: <code>a</code>
 - text: <code>None</code>
 files:

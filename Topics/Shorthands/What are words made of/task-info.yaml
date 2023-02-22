@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: '[a-zA-Z0-9-]'
-- text: '[a-zA-Z0-9_]'
-- text: '[^a-z0-9_]'
-- text: '[^a-zA-Z0-9_]'
+- text: "[a-zA-Z0-9-]"
+- text: "[a-zA-Z0-9_]"
+- text: "[^a-z0-9_]"
+- text: "[^a-zA-Z0-9_]"
 files:
 - name: main.py
   visible: true

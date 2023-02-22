@@ -11,5 +11,8 @@ files:
     \ 98, 99, 100]"
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/6967#comment
-status: Failed
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 12 Dec 2022 17:31:38 UTC"
 record: -1

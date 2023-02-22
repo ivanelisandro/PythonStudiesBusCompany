@@ -1,5 +1,5 @@
 <h2>Regexp quantifiers</h2>
-<html><body><p>We have already learned about sets and shorthands in regular expressions. Now it is time to learn another powerful feature that significantly contributes to the regexp flexibility. The metacharacters we are going to talk about are called <strong>quantifiers</strong>. Quantifiers always follow some other character (or a group of characters), and they are meant to specify the number of repetitions of this character in the string. So, quantifiers allow you to write not only fixed-length templates but also templates for strings of varying length. The indications for the required length of strings (the number of repetitions) can be both fixed or rough.</p>
+<p>We have already learned about sets and shorthands in regular expressions. Now it is time to learn another powerful feature that significantly contributes to the regexp flexibility. The metacharacters we are going to talk about are called <strong>quantifiers</strong>. Quantifiers always follow some other character (or a group of characters), and they are meant to specify the number of repetitions of this character in the string. So, quantifiers allow you to write not only fixed-length templates but also templates for strings of varying length. The indications for the required length of strings (the number of repetitions) can be both fixed or rough.</p>
 <p>We already know one of the quantifiers, the question mark <code class="language-python">?</code>, which matches either one or zero occurrences of the preceding character. Let's see what other quantifiers we can use!</p>
 <h5 id="the-plus-quantifier">The plus quantifier</h5>
 <p>Let's start with, perhaps, the simplest and the most straightforward quantifier, the plus <code class="language-python">+</code> quantifier. The plus <code class="language-python">+</code> quantifier basically means "the preceding character should appear <em>one</em><strong> </strong>or <em>more </em>times". That is, it matches one or more occurrences of the preceding character in the string. Look at the example below:</p>
@@ -93,4 +93,4 @@ re.match(template, "&lt;p&gt;paragraph&lt;/p&gt;&lt;p&gt;another paragraph&lt;/p
 <ul>
 <li>greedy mode (by default) when the quantifier matches as many occurrences of the character as possible;</li>
 <li>lazy mode (the quantifier is followed by <code class="language-python">?</code>) when the quantifier matches as few occurrences as possible.</li>
-</ul></body></html>
+</ul>

@@ -1,0 +1,1 @@
+sentence = str(input())  # input sentence

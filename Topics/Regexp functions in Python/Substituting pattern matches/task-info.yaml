@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: <code>re.findall(pattern, string, maxsplit=2)</code>
-- text: <code>re.sub(pattern, repl, string, maxsplit=2)</code>
-- text: <code>re.match(pattern, string, count=2)</code>
-- text: <code>re.sub(pattern, repl, string, count=2)</code>
+- text: "<code>re.findall(pattern, string, maxsplit=2)</code>"
+- text: "<code>re.sub(pattern, repl, string, maxsplit=2)</code>"
+- text: "<code>re.match(pattern, string, count=2)</code>"
+- text: "<code>re.sub(pattern, repl, string, count=2)</code>"
 files:
 - name: main.py
   visible: true

@@ -5,7 +5,7 @@ options:
 - text: <code>re.search()</code>
 - text: <code>re.findall()</code>
 - text: <code>re.match()</code>
-- text: None, functions always output strings matched by a pattern.
+- text: "None, functions always output strings matched by a pattern."
 files:
 - name: main.py
   visible: true

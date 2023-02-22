@@ -1,10 +1,13 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: <code>&lt;re.match object;="" span="(11," 21),="" match="no regrets"&gt;</code>
+- text: "<code>&lt;re.match object;=\"\" span=\"(11,\" 21),=\"\" match=\"no regrets\"\
+    &gt;</code>"
 - text: <code>None</code>
-- text: <code>&lt;re.match object;="" span="(0," 20),="" match="No regrets no regrets"&gt;</code>
-- text: <code>&lt;re.match object;="" span="(0," 10),="" match="No regrets"&gt;</code>
+- text: "<code>&lt;re.match object;=\"\" span=\"(0,\" 20),=\"\" match=\"No regrets\
+    \ no regrets\"&gt;</code>"
+- text: "<code>&lt;re.match object;=\"\" span=\"(0,\" 10),=\"\" match=\"No regrets\"\
+    &gt;</code>"
 files:
 - name: main.py
   visible: true
