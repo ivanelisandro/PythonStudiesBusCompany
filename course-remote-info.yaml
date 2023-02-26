@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/412967/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Mon, 20 Feb 2023 14:14:36 UTC"
+update_date: "Sun, 26 Feb 2023 15:13:51 UTC"
 stages:
 - id: 680
   step: 10888
@@ -27,10 +27,14 @@ topics:
   0:
   - title: Introduction to Operating systems
     theory_id: 9704
+  - title: Command line overview
+    theory_id: 8977
   - title: Files
     theory_id: 13025
   - title: File types
     theory_id: 13017
+  - title: Working with file modes and permissions
+    theory_id: 13961
   - title: Introduction to Python
     theory_id: 5204
   - title: Overview of the basic program
@@ -53,8 +57,6 @@ topics:
     theory_id: 5932
   - title: Load module
     theory_id: 6019
-  - title: Command line overview
-    theory_id: 8977
   - title: For loop
     theory_id: 6065
   - title: While loop
@@ -71,8 +73,6 @@ topics:
     theory_id: 9526
   - title: File modes and permissions
     theory_id: 13953
-  - title: Working with file modes and permissions
-    theory_id: 13961
   - title: Files in Python
     theory_id: 8691
   - title: Reading files
@@ -112,6 +112,8 @@ topics:
   - title: Dictionary methods
     theory_id: 9008
   1:
+  - title: Parameters and Options
+    theory_id: 9746
   - title: Overview of NLTK
     theory_id: 22474
   - title: Tokenization
@@ -120,8 +122,6 @@ topics:
     theory_id: 6057
   - title: Packages
     theory_id: 6384
-  - title: Parameters and Options
-    theory_id: 9746
   - title: Pip
     theory_id: 6230
   - title: Program execution
