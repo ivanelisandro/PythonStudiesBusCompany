@@ -93,6 +93,21 @@ files:
 - name: test/__init__.py
   visible: false
   learner_created: false
+- name: easyrider/Diagram_of_the_bus_line.jpg
+  visible: true
+  learner_created: true
+- name: easyrider/type_validation.py
+  visible: true
+  learner_created: true
+- name: easyrider/fields.py
+  visible: true
+  learner_created: true
+- name: easyrider/format_validation.py
+  visible: true
+  learner_created: true
+- name: easyrider/Documentation.jpg
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/10890#comment
 status: Unchecked
 record: -1
