@@ -1,29 +1,54 @@
 import json
+from fields import Fields
 from type_validation import TypeValidation
 from format_validation import FormatValidation
 
 
+class BusLinesReader:
+    @staticmethod
+    def read():
+        json_text = input()
+        return json.loads(json_text)
+
+
 class DataValidation:
     def __init__(self):
-        self.json_text = ''
-        self.json_data = None
         self.type_errors = TypeValidation()
         self.format_errors = FormatValidation()
 
-    def read(self):
-        self.json_text = input()
-        self.json_data = json.loads(self.json_text)
-
     def validate_type_required(self):
-        self.read()
-        self.type_errors.validate(self.json_data)
+        data = BusLinesReader.read()
+        self.type_errors.validate(data)
         self.type_errors.print()
 
     def validate_format(self):
-        self.read()
-        self.format_errors.validate(self.json_data)
+        data = BusLinesReader.read()
+        self.format_errors.validate(data)
         self.format_errors.print()
 
 
-validation = DataValidation()
-validation.validate_format()
+class BusLines:
+    def __init__(self):
+        self.lines = {}
+
+    def process(self):
+        json_data = BusLinesReader.read()
+        for item in json_data:
+            self.process_line(item)
+
+    def process_line(self, item):
+        line_id = item[Fields.id]
+        if line_id not in self.lines:
+            self.lines[line_id] = 0
+
+        self.lines[line_id] += 1
+
+    def print(self):
+        print(f"Line names and number of stops:")
+        for key, value in self.lines.items():
+            print(f"bus_id: {key}, stops: {value}")
+
+
+bus_lines = BusLines()
+bus_lines.process()
+bus_lines.print()
