@@ -5,8 +5,20 @@ files:
   text: '# put your code here'
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/15944#comment
-status: Solved
+status: Failed
 feedback:
-  message: <html>Correct solution</html>
-  time: "Thu, 15 Sep 2022 01:00:31 UTC"
+  message: |
+    Failed test #1 of 5. Wrong answer
+
+    This is a sample test from the problem statement!
+
+    Test input:
+    567
+    Correct output:
+    -567
+    The number is negative
+
+    Your code output:
+    -567
+  time: "Sun, 12 Mar 2023 20:02:34 UTC"
 record: -1
