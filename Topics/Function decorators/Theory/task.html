@@ -1,4 +1,5 @@
 <h2>Function decorators</h2>
+<div class="step-text">
 <p><strong>Decorator </strong>is<strong> </strong>a structural design pattern that allows programmers to extend and modify the behavior of a function, a method, or a class without changing their code. The main idea is that we place those callable objects, the functionality of which we need to change, inside other objects with new behavior. So, decorators are just wrappers around the initial objects. Most frequently, we use them to pass a function as an argument to a decorator to call this function later and perform some actions before and after the call.</p>
 <h5 id="syntax">Syntax</h5>
 <p>In Python, the standard syntax for decorators is the <code class="language-python">@</code> sign preceding the name of a decorator, and then the object we want to decorate on the next line with the same indentation. Decorators are called immediately before the body of a function, the behavior of which we would like to change. Here is a small example of what the general structure should look like:</p>
@@ -65,3 +66,4 @@ def func1(args_for_function):
 <li>They are introduced with the <code class="language-python">@</code> symbol right before the function, the functionality of which we want to modify;</li>
 <li>To create custom decorators, we need to specify a decorator function that will return a wrapper over the given function.</li>
 </ul>
+</div>

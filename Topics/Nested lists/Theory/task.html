@@ -1,5 +1,6 @@
 <h2>Nested lists</h2>
-<html><body><p>A list in Python may contain any objects as its elements, including other lists – they are called <strong>nested lists</strong>. Here are some examples of nested lists:</p>
+<div class="step-text">
+<p>A list in Python may contain any objects as its elements, including other lists – they are called <strong>nested lists</strong>. Here are some examples of nested lists:</p>
 <pre><code class="language-python">nested_letters  = ['a', 'b', ['c', 'd'], 'e']
 nested_numbers = [[1], [2], [3]]
 </code></pre>
@@ -21,7 +22,7 @@ print(lists[1][1][0])   # 2</code></pre>
 <pre><code class="language-python">print(lists[3])  # IndexError: list index out of range</code></pre>
 <h5 id="matrices">Matrices</h5>
 <p>Nested lists are a convenient way to represent a matrix. For example, the matrix</p>
-<p style="text-align: center;"><img alt="simple matrix" src="https://ucarecdn.com/46c9c04d-fe77-4a2c-a8d5-b54c39d62b7d/-/crop/80x77/20,0/-/preview/"/></p>
+<p style="text-align: center;"><img alt="simple matrix" height="77" src="https://ucarecdn.com/46c9c04d-fe77-4a2c-a8d5-b54c39d62b7d/-/crop/80x77/20,0/-/preview/" width="80"/></p>
 <p>might be represented as:</p>
 <pre><code class="language-python">M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</code></pre>
 <p>Note that in such a list lengths of all nested lists must be the same, and they are equal to the dimension of the matrix.</p>
@@ -64,4 +65,5 @@ for i in range(2):
           [0, 1, 2, 3, 4]]</code></pre>
 <p>It's important to bear in mind that shorter code does not imply better one, so you shouldn’t misuse list comprehension when working with nested lists.</p>
 <h5 id="summary">Summary</h5>
-<p>To sum up, lists as such are a very useful type of container in Data Structures, and now you know how to store multiple inner lists inside an outer one, reach them, represent matrices with them, and use nested list comprehensions.</p></body></html>
+<p>To sum up, lists as such are a very useful type of container in Data Structures, and now you know how to store multiple inner lists inside an outer one, reach them, represent matrices with them, and use nested list comprehensions.</p>
+</div>

@@ -1,5 +1,6 @@
 <h2>Creating bytes</h2>
-<html><body><p>In general, most operations that you can perform on strings may be also performed on bytes objects. Most probably, though, the only thing you'll actually ever need to do with bytes is to simply create them from objects of other data types and then convert them back. Why do <code class="language-python">bytes</code> even exist then, you may ask? The thing is, they may be useful in dealing with relatively low-level applications, where binary data is needed. The <a href="https://docs.python.org/3/library/http.html" rel="noopener noreferrer nofollow" target="_blank">http</a> and <a href="https://docs.python.org/3/library/socket.html" rel="noopener noreferrer nofollow" target="_blank">socket</a> modules are good examples: sending and receiving data through sockets is only possible with the bytes data type. </p>
+<div class="step-text">
+<p>In general, most operations that you can perform on strings may be also performed on bytes objects. Most probably, though, the only thing you'll actually ever need to do with bytes is to simply create them from objects of other data types and then convert them back. Why do <code class="language-python">bytes</code> even exist then, you may ask? The thing is, they may be useful in dealing with relatively low-level applications, where binary data is needed. The <a href="https://docs.python.org/3/library/http.html" rel="noopener noreferrer nofollow" target="_blank">http</a> and <a href="https://docs.python.org/3/library/socket.html" rel="noopener noreferrer nofollow" target="_blank">socket</a> modules are good examples: sending and receiving data through sockets is only possible with the bytes data type. </p>
 <p>Thus, we're now going to learn how to perform the conversion of data types when it all comes to <code class="language-python">bytes</code>.</p>
 <h5 id="b-prefix">b prefix</h5>
 <p>The most obvious way to create a bytes object is to write a string with a <code class="language-python">b</code> prefix. But be careful: this works only for characters that can be encoded by a single byte, i.e., characters whose Unicode code-point lies between 0 and 255 inclusively: ASCII and extended ASCII characters. A string containing characters other than these will lead to a syntax error.</p>
@@ -69,4 +70,5 @@ print(bytes_to_int)  # 1024</code></pre>
 <li><code class="language-python">encode()</code> is for converting strings, <code class="language-python">to_bytes()</code> serves for converting integers</li>
 <li><code class="language-python">decode()</code> can be applied for converting bytes to strings</li>
 <li><code class="language-python">from_bytes()</code> helps you to convert a bytes object to an integer.</li>
-</ul></body></html>
+</ul>
+</div>

@@ -1,5 +1,6 @@
 <h2>Working with PDF in Python</h2>
-<html><body><p>Everyone is familiar with PDF files. <strong>Portable Document Format</strong> (PDF) is a file format developed by Adobe Systems. It was introduced in 2008 as an open standard and governed by the ISO under the ISO 32000 standard.</p>
+<div class="step-text">
+<p>Everyone is familiar with PDF files. <strong>Portable Document Format</strong> (PDF) is a file format developed by Adobe Systems. It was introduced in 2008 as an open standard and governed by the ISO under the ISO 32000 standard.</p>
 <p>Each PDF file is a complete representation of a document. It can include images, texts, tables, styles, links to web pages, and other multimedia elements. It maintains the exact format of the document, so PDF is one of the most popular formats for printing. The PDF specification also provides for encryption, digital signatures, file attachments, and metadata. To view it, we need a PDF reader like <a href="https://get.adobe.com/reader/" rel="noopener noreferrer nofollow" target="_blank">Adobe Reader®</a> or a web browser.</p>
 <p>PDF ensured the transit from paper to digital format. We can create documents and send their electronic version anywhere. In this topic, we'll learn how to read an existing document and create <em>.pdf</em> files in Python.</p>
 <h5 id="reading-pdf-using-python">Reading PDF using Python</h5>
@@ -75,7 +76,7 @@ pdf.cell(w=1, txt="hello world!")
 pdf.output("dummy.pdf")
 </code></pre>
 <p>As a result, we can get the following PDF:</p>
-<p><img alt="" height="624" name="dummy_pdf.PNG" src="https://ucarecdn.com/5711ce2a-6d4b-44ef-b4f8-7b40b98439f7/" width="1118"/></p>
+<p><img alt="PDF output screenshot" height="624" name="dummy_pdf.PNG" src="https://ucarecdn.com/5711ce2a-6d4b-44ef-b4f8-7b40b98439f7/" width="1118"/></p>
 <p>We've created an <code class="language-python">FPDF</code> object with the default values: the pages are in A4 portrait mode, the unit of measurement is a millimeter. It is possible to set the PDF in landscape mode (<code class="language-python">L</code>) and use other page formats (such as <code class="language-python">Letter</code> or <code class="language-python">Legal</code>), as well as different units of measurement (<code class="language-python">pt</code>, <code class="language-python">cm</code>, <code class="language-python">in</code>).</p>
 <pre><code class="language-python">pdf = FPDF(orientation="L", format="Letter", unit="cm")</code></pre>
 <p>As you've seen, we are using the <code class="language-python">.cell()</code> function to add a line of text to our file. A cell is a rectangular area with text. It is rendered at the current position. We can specify some of its dimensions: width and height in the units defined in the <code class="language-python">FPDF</code> object (for borders) and text alignment. Note that <code class="language-python">w</code> is a required argument.</p>
@@ -84,4 +85,5 @@ pdf.cell(w=1, h=1, txt="I am the centered line", border=0, new_x=XPos.LMARGIN, n
 <p>The <code class="language-python">fpdf2</code> library has a great deal of other interesting features, such as changing the font color, adding multiple cells, header, footer, images, etc. You can check out the <a href="https://pyfpdf.github.io/fpdf2/fpdf/fpdf.html" rel="noopener noreferrer nofollow" target="_blank">Official Documentation</a>.</p>
 <p>Finally, the PDF document is closed and saved in the directory using the <code class="language-python">output</code> method. </p>
 <h5 id="conclusion">Conclusion</h5>
-<p>PDF is the standard for secure sharing and distribution of electronic documents around the globe, both on corporate intranets and on the Web. In this topic, you've learned how to use the <code class="language-python">PyPDF4</code> library to read PDF files with the help of the <code class="language-python">PdfFileReader</code> class and write the new ones using the <code class="language-python">PdfFileWriter</code> class. You've also learned how to create custom PDF files with the <code class="language-python">fpdf2</code> library.</p></body></html>
+<p>PDF is the standard for secure sharing and distribution of electronic documents around the globe, both on corporate intranets and on the Web. In this topic, you've learned how to use the <code class="language-python">PyPDF4</code> library to read PDF files with the help of the <code class="language-python">PdfFileReader</code> class and write the new ones using the <code class="language-python">PdfFileWriter</code> class. You've also learned how to create custom PDF files with the <code class="language-python">fpdf2</code> library.</p>
+</div>

@@ -1,2 +1,1 @@
-number = int(input())
-print(-number)
+# put your code here

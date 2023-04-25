@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    import math
+
+    # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15824#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 19 Apr 2023 05:07:56 UTC"
+record: -1
+submission_language: python3

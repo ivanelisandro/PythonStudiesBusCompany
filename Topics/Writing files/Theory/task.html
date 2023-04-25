@@ -1,5 +1,6 @@
 <h2>Writing files</h2>
-<html><body><p>One very important skill for programmers is knowing how to create new files or add information to existing ones. In this topic, you'll learn to write and append to files in Python.</p>
+<div class="step-text">
+<p>One very important skill for programmers is knowing how to create new files or add information to existing ones. In this topic, you'll learn to write and append to files in Python.</p>
 <h5 id="write-to-file" style="text-align: center;">Write to file</h5>
 <p>Well, the first step of writing to a file in Python is, of course, opening the said file for writing. The basic mode for writing is <code class="language-python">'w'</code>, which allows us to write text to a file. There are a few things we need to pay attention to, though. First, this mode allows us to create new files. This happens when the file we're trying to open doesn't exist yet. Second, if the file already exists, its contents will be overwritten when we open it for writing.</p>
 <p>Now that the file is open, we can use the <code class="language-python">write()</code> method. <code class="language-python">file.write()</code> allows us to write strings to a file – other types of data need to be converted to a string beforehand. Let's see it in action.</p>
@@ -47,4 +48,5 @@ name_file.close()</code></pre>
 <p>Now if we print the lines of the file, the output will look like this:</p>
 <pre><code class="language-python">['Kate\n', 'Alexander\n', 'Oscar\n', 'Mary\n', 'Rachel\n']</code></pre>
 <h5 id="summary" style="text-align: center;">Summary</h5>
-<p>In this topic, we've looked at a basic file operation — writing to files. Depending on whether we want to keep the original contents of the file or not, we can use the mode <code class="language-python">'a'</code> or <code class="language-python">'w'</code> respectively. The actual writing can be done with <code class="language-python">write()</code> or <code class="language-python">writelines()</code> methods.</p></body></html>
+<p>In this topic, we've looked at a basic file operation — writing to files. Depending on whether we want to keep the original contents of the file or not, we can use the mode <code class="language-python">'a'</code> or <code class="language-python">'w'</code> respectively. The actual writing can be done with <code class="language-python">write()</code> or <code class="language-python">writelines()</code> methods.</p>
+</div>

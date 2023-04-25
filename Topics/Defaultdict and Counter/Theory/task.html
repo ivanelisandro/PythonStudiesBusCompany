@@ -1,5 +1,6 @@
 <h2>Defaultdict and Counter</h2>
-<html><body><p>Dictionary is an incredibly versatile data structure. However, it has its limitations. In this topic, we'll look at one special <code class="language-python">dict</code> method that makes working with dictionaries much easier as well as some dictionary-like objects useful in particular situations.</p>
+<div class="step-text">
+<p>Dictionary is an incredibly versatile data structure. However, it has its limitations. In this topic, we'll look at one special <code class="language-python">dict</code> method that makes working with dictionaries much easier as well as some dictionary-like objects useful in particular situations.</p>
 <h5 id="method-dictsetdefault" style="text-align: center;">Method dict.setdefault()</h5>
 <p>Often dictionaries are used to store frequencies of elements from some collection. You may want to store word counts from a text, or values from a list. How would you do it? Well, the obvious way is to loop through all the elements and increment the count of the element you've encountered by one. However, you have to check if the element has already been encountered, otherwise you may get a <code class="language-python">KeyError</code>. This may be tedious: you have to write an <code class="language-python">if</code> statement, or catch exceptions, or handle <code class="language-python">None</code> values (if you use <code class="language-python">dict.get()</code>).</p>
 <p>As you may have guessed, there are easier ways to deal with this. One of them is the <code class="language-python">dict.setdefault()</code> method.</p>
@@ -87,4 +88,5 @@ print(freq_counter.most_common())
 <li><code class="language-python">collections.Counter</code> counts elements of an iterable object.</li>
 </ul>
 <p>For additional information about <code class="language-python">defaultdict</code> and <code class="language-python">Counter</code> you can check out the <a href="https://docs.python.org/3/library/collections.html#module-collections" rel="noopener noreferrer nofollow" target="_blank">official Python documentation</a>.</p>
-<p>We hope that you'll use these objects and methods in your projects!</p></body></html>
+<p>We hope that you'll use these objects and methods in your projects!</p>
+</div>

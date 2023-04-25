@@ -1,5 +1,6 @@
 <h2>Multiple inheritance</h2>
-<html><body><p>By now, you are familiar with the mechanism of inheritance. Now it's time to go deeper and gain insight into multiple inheritance. <strong>Multiple inheritance </strong>is when a class has two or more parent classes. We will see how it is implemented, what benefits it gives us, and what problems may arise.</p>
+<div class="step-text">
+<p>By now, you are familiar with the mechanism of inheritance. Now it's time to go deeper and gain insight into multiple inheritance. <strong>Multiple inheritance </strong>is when a class has two or more parent classes. We will see how it is implemented, what benefits it gives us, and what problems may arise.</p>
 <h5 id="multiple-inheritance" style="text-align: center;">Multiple inheritance</h5>
 <p>In code, multiple inheritance looks similar to single inheritance. Only now, in brackets after the child class, you need to write all parent classes instead of just one:</p>
 <pre><code class="language-python">class ParentClass1:
@@ -18,7 +19,7 @@ class ChildClass(ParentClass1, ParentClass2, ParentClass3):
     ...
 </code></pre>
 <p> Let's have a look at a particular class hierarchy. In the scheme, arrows point from the child class to the parent class.</p>
-<p style="text-align: center;"><img alt="" height="278" name="1.svg" src="https://ucarecdn.com/96c0eb5e-f3b3-4b49-89c4-de2b8204c658/" width="300"/></p>
+<p style="text-align: center;"><img alt="Multiple Inheritance" height="278" name="1.svg" src="https://ucarecdn.com/96c0eb5e-f3b3-4b49-89c4-de2b8204c658/" width="300"/></p>
 <p style="text-align: center;"><em>Class hierarchy with multiple inheritance.</em></p>
 <p>As you can see, there are a basic parent class <code class="language-python">Person</code> and classes <code class="language-python">Student</code> and <code class="language-python">Programmer</code> that inherit from it. The class <code class="language-python">StudentProgrammer</code>, in its turn, inherits from both <code class="language-python">Student</code> and <code class="language-python">Programmer</code> classes, which makes it a case of multiple inheritance. This way, we can say that <code class="language-python">StudentProgrammer</code> has two parent classes, <code class="language-python">Student</code> and <code class="language-python">Programmer</code>, while <code class="language-python">Person</code> can be regarded as a "grandparent" class.</p>
 <p>Here's how the basic code for this hierarchy looks:</p>
@@ -104,4 +105,5 @@ jack.print_message()
 <h5 id="summary" style="text-align: center;">Summary</h5>
 <p>In this topic, we've looked at multiple inheritance in Python: a situation when a class has more than one parent. While it can be very useful, multiple inheritance can also lead to some problems, for example, the diamond problem.</p>
 <p>Python uses method resolution order, MRO, to deal with ambiguity. Every class has an attribute that contains its MRO. The <code class="language-python">super()</code> function, which is used for accessing methods and attributes of the parent class, makes use of the MRO to determine which implementation to call.</p>
-<p>We encourage you to experiment with different class hierarchies and the <code class="language-python">super()</code> function. This will allow you to get the hang of multiple inheritance, deal with hidden dangers and learn how to construct complex hierarchies in an efficient way.</p></body></html>
+<p>We encourage you to experiment with different class hierarchies and the <code class="language-python">super()</code> function. This will allow you to get the hang of multiple inheritance, deal with hidden dangers and learn how to construct complex hierarchies in an efficient way.</p>
+</div>

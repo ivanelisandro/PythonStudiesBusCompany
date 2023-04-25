@@ -1,4 +1,5 @@
 <h2>Regexp sets and ranges</h2>
+<div class="step-text">
 <p>In the previous topics, we have learned about the dot and the question mark in regexp language and the ways of escaping them, and other regexp metacharacters. Now it is time to learn about these metacharacters and the specifics of their functioning. First of all, let's start with the sets. </p>
 <h5 id="sets">Sets</h5>
 <p>While the dot allows us to match almost every possible character, the sets provide us with the opportunity to be more specific in our regexp templates and narrow down the scope of our search. Each set in the regular expression takes the place of exactly one character in the string, but it defines a whole number of characters that can match it. These characters are listed inside the square brackets, <code class="language-python">[]</code>:</p>
@@ -97,3 +98,4 @@ re.match('[A-Z^]ames', '^ames')  # match</code></pre>
 <li>the dash <code class="language-python">-</code> allows us to easily put a range of characters in the set;</li>
 <li>a set with the hat <code class="language-python">^</code>  in the first position matches every character that is not listed in it.</li>
 </ul>
+</div>

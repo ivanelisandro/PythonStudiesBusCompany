@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/412967/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Tue, 21 Mar 2023 04:28:49 UTC"
+update_date: "Tue, 25 Apr 2023 00:07:18 UTC"
 stages:
 - id: 680
   step: 10888
@@ -45,6 +45,8 @@ topics:
     theory_id: 5879
   - title: Comments
     theory_id: 6081
+  - title: Load module
+    theory_id: 6019
   - title: Taking input
     theory_id: 5913
   - title: Naming variables
@@ -55,8 +57,6 @@ topics:
     theory_id: 5953
   - title: Else statement
     theory_id: 5932
-  - title: Load module
-    theory_id: 6019
   - title: For loop
     theory_id: 6065
   - title: While loop

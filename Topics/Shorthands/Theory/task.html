@@ -1,5 +1,6 @@
 <h2>Shorthands</h2>
-<html><body><p>Previously, you have learned about sets and their most helpful and powerful features of regular expressions. Since some of them are more widespread than others, special shorthands were designed to make them easy to use. The general formula for shorthands is the backslash <code class="language-python">\</code> followed by a letter (for example, <code class="language-python">\s</code>). Let's take a closer look at these metacharacters.</p>
+<div class="step-text">
+<p>Previously, you have learned about sets and their most helpful and powerful features of regular expressions. Since some of them are more widespread than others, special shorthands were designed to make them easy to use. The general formula for shorthands is the backslash <code class="language-python">\</code> followed by a letter (for example, <code class="language-python">\s</code>). Let's take a closer look at these metacharacters.</p>
 <h5 id="shorthands-for-sets">Shorthands for sets</h5>
 <p>Like sets, each shorthand represents one character in the string, but which character matches the shorthand and which one does not, depends on the shorthand. There are two types of shorthands that can be used in the place of character sets. Shorthands of the first type correspond to strictly described and limited sets of characters. The shorthands of the second type are <strong>negated </strong>shorthands; they correspond to sets banning certain characters, matching to anything else.</p>
 <p>Shorthands of the first type are denoted by a backslash and a lowercase letter:</p>
@@ -93,4 +94,5 @@ re.match("Bring cash", "Bring cash$")    # match: match() matches the start of t
 <li>these shorthands, depending on which one you use, can match alphanumeric characters, digits, or whitespace characters. They can also match any characters <em>except </em>these (these shorthands are called negated);</li>
 <li>shorthands can be used in sets. You should be careful with negated shorthands in sets;</li>
 <li>some shorthands match empty strings in special situations, at word or string boundaries.</li>
-</ul></body></html>
+</ul>
+</div>
