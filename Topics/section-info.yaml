@@ -60,3 +60,5 @@ content:
 - Tokenization
 - Regexps in programs
 - Program with numbers
+- Itertools module
+- Bytes basics
