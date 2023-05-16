@@ -117,6 +117,12 @@ files:
 - name: easyrider/Documentation.jpg
   visible: true
   learner_created: true
+- name: easyrider/bus_entities.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/10891#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 16 May 2023 03:09:28 UTC"
 record: -1
