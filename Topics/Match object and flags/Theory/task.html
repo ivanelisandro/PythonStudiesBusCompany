@@ -1,6 +1,6 @@
 <h2>Match object and flags</h2>
 <div class="step-text">
-<html><body><p>Regexp template syntax is pretty much the same across all major programming languages. The main features of the Python regexps as opposed to any other programming language are special functions and objects of the <code class="language-python">re</code> module.</p>
+<p>Regexp template syntax is pretty much the same across all major programming languages. The main features of the Python regexps as opposed to any other programming language are special functions and objects of the <code class="language-python">re</code> module.</p>
 <p>First of all, it may be a good idea to get to know what exactly you are going to get when your regexp template matches a string. In this topic, we'll take a look at the <code class="language-python">Match</code> object and its attributes. Also, we'll check out the <strong>flags </strong>that we can apply while calling any matching function. Flags are a small part of the <code class="language-python">re</code> module, but they can simplify the regexp processing a lot.</p>
 <h5 id="match-object">Match object</h5>
 <p>As you can remember from the introductory topic on Python regexps, when your regexp template isn't found in a string, the matching function returns <code class="language-python">None</code>.</p>
@@ -73,5 +73,5 @@ with_flag = re.match(dot_template, 'new line \n', flags=re.DOTALL)  # match</cod
 <li>to extract a substring that matches your template, use the <code class="language-python">group()</code> method of the <code class="language-python">Match</code> object;</li>
 <li>to extract indexes of the matching substring in the original string, use <code class="language-python">start()</code>, <code class="language-python">end()</code> or <code class="language-python">span()</code> methods;</li>
 <li>flags can simplify your regexps: <code class="language-python">re.IGNORECASE</code> makes your regexp case-insensitive, <code class="language-python">re.DOTALL</code> make the dot character match <code class="language-python">\n</code> character, as well as any other possible character.</li>
-</ul></body></html>
+</ul>
 </div>
