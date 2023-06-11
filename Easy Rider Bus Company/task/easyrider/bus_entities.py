@@ -1,4 +1,69 @@
 import json
+from fields import Fields
+
+
+class BusStopFilter:
+    @staticmethod
+    def by_type(lines, stop_type: str):
+        for line in lines:
+            for stop in line.stops:
+                if stop.stop_type == stop_type:
+                    yield stop.name
+
+    @staticmethod
+    def only_transfers(lines):
+        stops_count = {}
+
+        for line in lines:
+            for stop in line.stops:
+                if stop.stop_id not in stops_count:
+                    stops_count[stop.stop_id] = 0
+                stops_count[stop.stop_id] += 1
+
+                if stops_count[stop.stop_id] > 1:
+                    yield stop.name
+
+
+class LinesValidation:
+    @staticmethod
+    def has_error_start_end(lines):
+        for line in lines:
+            error = line.find_error_start_end()
+            if error:
+                print(error)
+                return False
+        return True
+
+    @staticmethod
+    def validate_starts_ends(lines):
+        if LinesValidation.has_error_start_end(lines):
+            LinesValidation.print_stops_grouped(lines)
+
+    @staticmethod
+    def print_stops_grouped(lines):
+        start_stops = set(BusStopFilter.by_type(lines, "S"))
+        transfer_stops = set(BusStopFilter.only_transfers(lines))
+        end_stops = set(BusStopFilter.by_type(lines, "F"))
+        print(f"Start stops: {len(start_stops)} {sorted(start_stops)}")
+        print(f"Transfer stops: {len(transfer_stops)} {sorted(transfer_stops)}")
+        print(f"End stops: {len(end_stops)} {sorted(end_stops)}")
+
+    @staticmethod
+    def validate_times(lines):
+        errors = []
+        for line in lines:
+            error = line.find_error_time()
+            if error:
+                errors.append(error)
+        LinesValidation.print_times(errors)
+
+    @staticmethod
+    def print_times(time_errors):
+        print(f"Arrival time test:")
+        if time_errors:
+            print(*time_errors, sep='\n')
+        else:
+            print("OK")
 
 
 class BusLinesReader:
@@ -22,11 +87,26 @@ class BusLine:
         self.line_id = line_id
         self.stops = []
 
-    def validate_stops(self):
-        start = sum(1 for stop in self.stops if stop.stop_type == "S")
-        final = sum(1 for stop in self.stops if stop.stop_type == "F")
-        if start < 1 or final < 1:
+    def get_stop(self, stop_id):
+        for stop in self.stops:
+            if stop.stop_id == stop_id:
+                return stop
+        return None
+
+    def find_error_start_end(self):
+        start_count = sum(1 for stop in self.stops if stop.stop_type == "S")
+        end_count = sum(1 for stop in self.stops if stop.stop_type == "F")
+        if start_count < 1 or end_count < 1:
             return f"There is no start or end stop for the line: {self.line_id}."
-        if start > 1 or final > 1:
+        if start_count > 1 or end_count > 1:
             return f"There are too many start or end stops for the line: {self.line_id}."
+        return None
+
+    def find_error_time(self):
+        for stop in self.stops:
+            if stop.stop_type == "F":
+                continue
+            next_stop = self.get_stop(stop.next_stop)
+            if stop.time > next_stop.time:
+                return f"{Fields.id} line {self.line_id}: wrong time on station {next_stop.name}"
         return None

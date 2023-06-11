@@ -1,7 +1,7 @@
 from fields import Fields
 from type_validation import TypeValidation
 from format_validation import FormatValidation
-from bus_entities import BusLinesReader, BusStop, BusLine
+from bus_entities import BusLinesReader, BusStop, BusLine, LinesValidation
 
 
 class DataValidation:
@@ -28,12 +28,8 @@ class EasyRider:
         json_data = BusLinesReader.read()
         for item in json_data:
             self.process_lines(item)
-        for line in self.lines.values():
-            validation = line.validate_stops()
-            if validation:
-                print(validation)
-                return False
-        return True
+
+        LinesValidation.validate_times(self.lines.values())
 
     def process_lines(self, item):
         line_id = item[Fields.id]
@@ -49,32 +45,6 @@ class EasyRider:
 
         self.lines[line_id].stops.append(bus_stop)
 
-    def get_stops_by_type(self, stop_type: str):
-        for line in self.lines.values():
-            for stop in line.stops:
-                if stop.stop_type == stop_type:
-                    yield stop.name
-
-    def get_transfers(self):
-        stops_count = {}
-
-        for line in self.lines.values():
-            for stop in line.stops:
-                if stop.stop_id not in stops_count:
-                    stops_count[stop.stop_id] = 0
-                stops_count[stop.stop_id] += 1
-
-                if stops_count[stop.stop_id] > 1:
-                    yield stop.name
-
-    def print_stops_grouped(self):
-        start_stops = set(self.get_stops_by_type("S"))
-        transfer_stops = set(self.get_transfers())
-        end_stops = set(self.get_stops_by_type("F"))
-        print(f"Start stops: {len(start_stops)} {sorted(start_stops)}")
-        print(f"Transfer stops: {len(transfer_stops)} {sorted(transfer_stops)}")
-        print(f"End stops: {len(end_stops)} {sorted(end_stops)}")
-
     def print_stops_number(self):
         print(f"Line names and number of stops:")
         for key, value in self.lines.items():
@@ -82,5 +52,4 @@ class EasyRider:
 
 
 easy_rider = EasyRider()
-if easy_rider.process():
-    easy_rider.print_stops_grouped()
+easy_rider.process()
