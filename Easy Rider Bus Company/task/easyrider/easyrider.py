@@ -29,7 +29,7 @@ class EasyRider:
         for item in json_data:
             self.process_lines(item)
 
-        LinesValidation.validate_times(self.lines.values())
+        LinesValidation.validate_ondemand_stops(self.lines.values())
 
     def process_lines(self, item):
         line_id = item[Fields.id]

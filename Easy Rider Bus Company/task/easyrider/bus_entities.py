@@ -4,10 +4,10 @@ from fields import Fields
 
 class BusStopFilter:
     @staticmethod
-    def by_type(lines, stop_type: str):
+    def by_types(lines, stop_types):
         for line in lines:
             for stop in line.stops:
-                if stop.stop_type == stop_type:
+                if stop.stop_type != "" and stop.stop_type in stop_types:
                     yield stop.name
 
     @staticmethod
@@ -41,9 +41,9 @@ class LinesValidation:
 
     @staticmethod
     def print_stops_grouped(lines):
-        start_stops = set(BusStopFilter.by_type(lines, "S"))
+        start_stops = set(BusStopFilter.by_types(lines, "S"))
         transfer_stops = set(BusStopFilter.only_transfers(lines))
-        end_stops = set(BusStopFilter.by_type(lines, "F"))
+        end_stops = set(BusStopFilter.by_types(lines, "F"))
         print(f"Start stops: {len(start_stops)} {sorted(start_stops)}")
         print(f"Transfer stops: {len(transfer_stops)} {sorted(transfer_stops)}")
         print(f"End stops: {len(end_stops)} {sorted(end_stops)}")
@@ -62,6 +62,22 @@ class LinesValidation:
         print(f"Arrival time test:")
         if time_errors:
             print(*time_errors, sep='\n')
+        else:
+            print("OK")
+
+    @staticmethod
+    def validate_ondemand_stops(lines):
+        on_demand = set(BusStopFilter.by_types(lines, "O"))
+        start_end = set(BusStopFilter.by_types(lines, "SF"))
+        start_end_transfer = start_end.union(BusStopFilter.only_transfers(lines))
+        invalid = on_demand.intersection(start_end_transfer)
+        LinesValidation.print_invalid_ondemand(invalid)
+
+    @staticmethod
+    def print_invalid_ondemand(invalid_stops):
+        print(f"On demand stops test:")
+        if invalid_stops:
+            print(f"Wrong stop type: {sorted(list(invalid_stops))}")
         else:
             print("OK")
 

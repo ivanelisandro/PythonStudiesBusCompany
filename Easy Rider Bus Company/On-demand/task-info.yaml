@@ -138,6 +138,28 @@ files:
 - name: test/__init__.py
   visible: false
   learner_created: false
+- name: easyrider/Diagram_of_the_bus_line.jpg
+  visible: true
+  learner_created: true
+- name: easyrider/bus_entities.py
+  visible: true
+  learner_created: true
+- name: easyrider/type_validation.py
+  visible: true
+  learner_created: true
+- name: easyrider/fields.py
+  visible: true
+  learner_created: true
+- name: easyrider/format_validation.py
+  visible: true
+  learner_created: true
+- name: easyrider/Documentation.jpg
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/10893#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Sun, 11 Jun 2023 19:58:35 UTC"
 record: -1
